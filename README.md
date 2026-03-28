@@ -26,8 +26,9 @@ This is a simple lab I set up to practice Active Directory, domain joins, and ba
      
 ## Screenshots
 
-![AD Domain Overview](screenshots/active-directory-domain-overview.png)
-![AD Users](screenshots/ad-users-created.png)
+![AD Domain Overview](screenshots/ad-domain-overview.png)
+![AD Users](screenshots/ad-user-created.png)
 ![Client DNS](screenshots/client-dns-configuration.png)
 ![Ping Test](screenshots/network-connectivity-test.png)
 ![Domain Join Success](screenshots/domain-join-success.png)
+![Domain Login Success](screenshots/domain-user-login-success.png)
