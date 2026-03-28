@@ -56,7 +56,7 @@ Users were added to their respective OUs:
 - `HR-Team` OU → other users as needed
 
 **Screenshot:**  
-![Organizational Units](screenshots/ad-organizational-units.png)  
+![Organizational Units](screenshots/ad-organisational-units.png)  
 
 ---
 
