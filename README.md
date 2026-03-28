@@ -81,8 +81,7 @@ Security groups were created to manage access permissions:
 - Type: **Security**, Scope: **Global**  
 - Member added: `amy.admin`  
 
-**Screenshot:**  
-![Group Created](screenshots/ad-user-groups.png)  
+**Screenshot:**    
 ![Group Members](screenshots/ad-group-members.png)  
 
 > **Note:** OUs organize users, but permissions are controlled via groups.  
