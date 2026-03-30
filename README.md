@@ -152,7 +152,7 @@ gpupdate /force
 
 At first, I mistakenly ran this on the server, but realised that Group Policy must be applied on the client machine.
 
-![Group Policy Update](screenshots/gpupdate.png)
+![Group Policy Update](screenshots/gpo-policy-updated.png)
 
 ---
 
