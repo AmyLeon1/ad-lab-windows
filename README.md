@@ -115,3 +115,64 @@ Windows 11 client VM was used to access the shared folder as a domain user (`cor
 - Demonstrated that **group membership governs access** independent of OU placement  
 
 This lab represents a basic, realistic AD structure suitable for IT support training.
+
+# Active Directory Lab – Group Policy (GPO)
+
+This section of the lab focuses on creating and applying a Group Policy Object (GPO) to control user behaviour in the domain.
+
+---
+
+## 1. Creating and Linking the GPO
+
+I created a new Group Policy Object called `IT-Restrictions` and linked it to the `IT-Team` Organizational Unit (OU). This ensures the policy applies only to users inside that OU.
+
+![GPO Created and Linked](screenshots/gpo-created.png)
+
+---
+
+## 2. Configuring the Policy
+
+Inside the GPO, I enabled a restriction to block access to the Control Panel.
+
+Path used:
+- User Configuration → Administrative Templates → Control Panel
+
+Setting enabled:
+- Prohibit access to Control Panel
+
+![GPO Setting Enabled](screenshots/gpo-setting-enabled.png)
+
+---
+
+## 3. Applying the Policy on the Client
+
+To apply the policy, I switched to the Windows 11 client VM and ran: 
+gpupdate /force
+
+
+At first, I mistakenly ran this on the server, but realised that Group Policy must be applied on the client machine.
+
+![Group Policy Update](screenshots/gpupdate.png)
+
+---
+
+## 4. Testing the Policy
+
+I tested the policy by attempting to open the Control Panel on the Windows 11 VM while logged in as the domain user `corp\amy.admin`.
+
+Access was blocked, confirming that the GPO was successfully applied.
+
+![Control Panel Blocked](screenshots/gpo-test-control-panel-blocked.png)
+
+---
+
+## What I learned
+
+- How to create and link a GPO to a specific OU  
+- The difference between server-side configuration and client-side application  
+- That GPOs apply to users based on their OU location  
+- How to use `gpupdate /force` to refresh policies  
+- The importance of logging out/in for user policies  
+- Basic troubleshooting when a policy does not apply  
+
+This lab helped me understand how Group Policy is used in real IT environments to enforce restrictions and manage users centrally.
