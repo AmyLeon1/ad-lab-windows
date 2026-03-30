@@ -166,7 +166,7 @@ Access was blocked, confirming that the GPO was successfully applied.
 
 ---
 
-## What I learned
+### What I learned
 
 - How to create and link a GPO to a specific OU  
 - The difference between server-side configuration and client-side application  
@@ -174,5 +174,7 @@ Access was blocked, confirming that the GPO was successfully applied.
 - How to use `gpupdate /force` to refresh policies  
 - The importance of logging out/in for user policies  
 - Basic troubleshooting when a policy does not apply  
+
+I initially ran `gpupdate /force` on the server instead of the Windows 11 client, which helped me understand that policies are created on the server but must be applied on client machines to take effect.  
 
 This lab helped me understand how Group Policy is used in real IT environments to enforce restrictions and manage users centrally.
