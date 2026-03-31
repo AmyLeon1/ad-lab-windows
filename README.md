@@ -178,3 +178,59 @@ Access was blocked, confirming that the GPO was successfully applied.
 I initially ran `gpupdate /force` on the server instead of the Windows 11 client, which helped me understand that policies are created on the server but must be applied on client machines to take effect.  
 
 This lab helped me understand how Group Policy is used in real IT environments to enforce restrictions and manage users centrally.
+
+
+## Password and Account Lockout Policy Lab
+
+In this part of the lab, I configured password and account lockout policies using the Default Domain Policy in Active Directory.
+
+I accessed the policy through Group Policy Management and edited the Default Domain Policy.
+
+### Password Policy
+
+I configured the following settings:
+
+- Minimum password length: 8 characters  
+- Password complexity: Enabled  
+
+These settings ensure stronger passwords are used across the domain.
+
+![Password Policy](screenshots/password-policy.png)
+
+---
+
+### Account Lockout Policy
+
+I configured account lockout settings to improve security and prevent repeated failed login attempts:
+
+- Account lockout threshold: 3 invalid attempts  
+- Account lockout duration: 5 minutes (set lower for testing)  
+- Reset account lockout counter after: 5 minutes  
+
+This means that if a user enters the wrong password 3 times within 5 minutes, their account will be locked for 5 minutes.
+
+![Account Lockout Policy](screenshots/account-lockout-policy.png)
+
+---
+
+### Testing the Policy
+
+On the Windows 11 client machine, I tested the policy by logging out and attempting to sign in with incorrect credentials multiple times.
+
+After 3 failed login attempts, the account was locked as expected.
+
+I did not need to run `gpupdate /force` in this case, as logging out and logging back in was enough for the policy to apply. This helped demonstrate that some policies are applied automatically during the login process.
+
+![Account Lockout Test](screenshots/account-lockout-test.png)
+
+---
+
+### What I learned
+
+- How to configure password and account lockout policies using Group Policy  
+- The difference between password policy and account lockout settings  
+- How the lockout threshold, duration, and reset counter work together  
+- That some policies apply automatically at login without needing `gpupdate /force`  
+- How to test account lockout behaviour in a controlled environment  
+
+This lab helped me understand how organizations enforce password security and protect against repeated login attempts in a real-world environment.
