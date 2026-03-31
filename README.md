@@ -298,7 +298,7 @@ On the Windows 11 client:
 2. Was prompted to change the password immediately  
 3. Entered a new password and confirmed access  
 
-![Password Change Required](screenshots/password-change-required.png)
+![Password Change Required](screenshots/password-reset-required.png)
 
 ---
 
