@@ -195,7 +195,7 @@ I configured the following settings:
 
 These settings ensure stronger passwords are used across the domain.
 
-![Password Policy](screenshots/password-settings-updated.png)
+![Password Policy](screenshots/passsword-settings-updated.png)
 
 ---
 
