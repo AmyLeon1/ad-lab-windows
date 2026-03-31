@@ -271,3 +271,89 @@ In this lab, I created a shared folder on the server and mapped it as a network 
 - If a shared folder is not visible on the client, check that it is still being shared on the server  
 
 This lab helped me understand how shared resources are managed and accessed in a domain environment.
+
+## Password Reset Lab
+
+In this lab, I simulated a common IT support task by resetting a user’s password in Active Directory and forcing them to change it at next login.
+
+### Steps
+
+1. Opened **Active Directory Users and Computers** on the server  
+2. Navigated to the `IT-Team` OU  
+3. Right-clicked the user `amy.admin`  
+4. Selected **Reset Password**  
+5. Entered a new password  
+6. Selected **User must change password at next logon**  
+7. Clicked OK  
+
+![Password Reset](screenshots/password-reset.png)
+
+---
+
+### Testing
+
+On the Windows 11 client:
+
+1. Logged in as `corp\amy.admin`  
+2. Was prompted to change the password immediately  
+3. Entered a new password and confirmed access  
+
+![Password Change Required](screenshots/password-change-required.png)
+
+---
+
+### What I learned
+
+- How to reset a user password in Active Directory  
+- How to force a user to change their password at next login  
+- How password policies are enforced during login  
+- This is a common IT support task for handling user access issues  
+
+This lab helped me understand how administrators manage user credentials securely in a domain environment.
+
+
+## Disable User Account Lab
+
+In this lab, I simulated disabling a user account, which is a common task when an employee leaves or no longer requires access.
+
+### Steps
+
+1. Opened **Active Directory Users and Computers** on the server  
+2. Navigated to the `IT-Team` OU  
+3. Right-clicked the user `amy.admin`  
+4. Selected **Disable Account**  
+
+The user icon changed to indicate the account was disabled.
+
+![User Disabled](screenshots/user-disabled.png)
+
+---
+
+### Testing
+
+On the Windows 11 client:
+
+1. Attempted to log in as `corp\amy.admin`  
+2. Login failed as expected because the account was disabled  
+
+![Disabled Login Failed](screenshots/disabled-login-failed.png)
+
+---
+
+### Re-enabling the Account
+
+To restore access:
+
+1. Right-clicked the user in Active Directory  
+2. Selected **Enable Account**  
+
+---
+
+### What I learned
+
+- How to disable and enable user accounts in Active Directory  
+- That disabling an account immediately prevents login access  
+- How account status is enforced across the domain  
+- This is a key task in user offboarding and access control  
+
+This lab helped me understand how user access is managed securely in real-world IT environments.
