@@ -234,3 +234,40 @@ I did not need to run `gpupdate /force` in this case, as logging out and logging
 - How to test account lockout behaviour in a controlled environment  
 
 This lab helped me understand how organizations enforce password security and protect against repeated login attempts in a real-world environment.
+
+## Shared Folder and Drive Mapping Lab
+
+In this lab, I created a shared folder on the server and mapped it as a network drive on the Windows 11 client.
+
+### Server Setup
+
+- Created a folder called `IT-Shared` on the server  
+- Enabled sharing using Properties → Sharing → Advanced Sharing  
+- Set permissions for the IT-Team group  
+
+![Shared Folder on Server](screenshots/drive-mapping-gpo.png)
+
+---
+
+
+### Drive Mapping with GPO
+
+- Created a GPO to map the shared folder to drive letter Z:  
+- Linked the GPO to the IT-Team OU  
+- Logged out and back in on the Windows 11 client  
+- Verified that the Z: drive appears and points to the shared folder  
+
+![Mapped Drive](screenshots/mapped-drive.png)
+
+---
+
+### What I learned
+
+- How to share a folder on the server and assign permissions  
+- How to access a shared folder from a client using a network path  
+- How to map a network drive using Group Policy  
+- That drive mappings are applied when a user logs in  
+- That `gpupdate /force` can be used to apply policies immediately  
+- If a shared folder is not visible on the client, check that it is still being shared on the server  
+
+This lab helped me understand how shared resources are managed and accessed in a domain environment.
