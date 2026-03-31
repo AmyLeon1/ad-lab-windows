@@ -195,7 +195,7 @@ I configured the following settings:
 
 These settings ensure stronger passwords are used across the domain.
 
-![Password Policy](screenshots/password-policy.png)
+![Password Policy](screenshots/password-settings-updated.png)
 
 ---
 
@@ -209,7 +209,7 @@ I configured account lockout settings to improve security and prevent repeated f
 
 This means that if a user enters the wrong password 3 times within 5 minutes, their account will be locked for 5 minutes.
 
-![Account Lockout Policy](screenshots/account-lockout-policy.png)
+![Account Lockout Policy](screenshots/account-lockout-settings-updated.png)
 
 ---
 
