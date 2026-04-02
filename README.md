@@ -1,3 +1,17 @@
+# Active Directory Home Lab
+
+This repository documents a series of hands-on Active Directory labs built using a Windows Server and Windows 11 virtual machine environment. Each lab covers a core IT support or sysadmin task, from initial domain setup through to user management, Group Policy, and access control. Labs include screenshots and step-by-step documentation.
+
+## Table of Contents
+
+* [Active Directory Home Lab – Windows Server & Windows 11](#active-directory-home-lab--windows-server--windows-11)
+* [Active Directory Lab – OU, Groups, and Shared Folder](#active-directory-lab--ou-groups-and-shared-folder)
+* [Active Directory Lab – Group Policy (GPO)](#active-directory-lab--group-policy-gpo)
+* [Password and Account Lockout Policy Lab](#password-and-account-lockout-policy-lab)
+* [Shared Folder and Drive Mapping Lab](#shared-folder-and-drive-mapping-lab)
+* [Password Reset Lab](#password-reset-lab)
+* [Disable User Account Lab](#disable-user-account-lab)
+
 # Active Directory Lab - Windows Server & Windows 11
 
 This is a simple lab I set up to practice Active Directory, domain joins, and basic network connectivity between a Windows Server VM and a Windows 11 client VM.
